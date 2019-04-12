@@ -1,14 +1,62 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* .square {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 30px;
+  background-color: lightgray;
+  color: white;
+}
+.switch-off {
+  background-color: #f9314d;
+}
+.switch-on {
+  background-color: #1bae61;
+} */
+.bgLight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  transition: background-color 0.5s ease;
+}
+
+.light-on {
+  background-color: white;
+}
+
+.light-off {
+  background-color: black;
+}
+
+.menu {
+  position: fixed;
+  top: 56px;
+  left: -250px;
+  height: calc(100% - 56px);
+  width: 250px;
+  padding: 20px;
+  background: white;
+  overflow-y: auto;
+  z-index: 1;
+  box-shadow: 0 2px 8px rgba(80, 80, 80, 0.2);
+  transition: all ease-in-out 180ms;
+}
+.menu.menu-active {
+  left: 0;
 }
